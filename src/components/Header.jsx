@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './Header.css'; 
-import Navbar from './Navbar';
+import './Header.css';
 import Logo from './Logo';
+import Navbar from './Navbar'
 function Header() {
     const [toggle, setToggle] = useState(false);
   return (
