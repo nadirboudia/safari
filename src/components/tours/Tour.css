@@ -1,30 +1,54 @@
-.tour-item
-{
-width: 24% !important;
-margin: 300px 10px;
-height: 200px;
-border-radius: 7px;
-background-color: white;
+.tour-list{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;    
+gap: 10px;
+margin-top: 5%;
+padding: 0px 10px;
 
 
 }
+
+
+.tour-item
+{
+width: 24% !important;
+margin: 50px 10px;
+height: 550px;
+border-radius: 7px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tour-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* softer and cleaner */
+}
 .tour-image{
 width: 100%;
-height: 210px;
+height: 40%;
 object-fit: cover;
 border-radius: 7px 7px 0 0;
 }
 .itembody{
-padding: 10px 5px;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 60%;                   
+  padding: 10px;
+  background: white;
+ padding: 20px 15px;
+ 
 }
-.title{
-font-size: 16px;
-font-weight: 600;
-color: #333;
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+              /* Optional but useful */
 }
 .duration-rating{
 display: flex;
-padding: 30px 5px;
+padding: 15px 5px;
 font-size: medium;
 font-weight: 500;
 }
@@ -33,14 +57,25 @@ font-weight: 500;
 }
 .rating-reviews {
     display: flex;
-    padding: 6px 5px;
     align-items: center;
-    gap: 5px;
+    gap: 13px;
+    width: 100%;
+    
 }
-.stars{
-    color: #f39c12;
-    font-size: 30px;
+.stars {
+  display: flex;         /* 👈 Needed for gap to work */
+  
+  padding: 0 10px;
+
+  width: 40%;              /* 👈 Adjust spacing between stars */
+  
 }
+.stars i{
+  font-size: 22px;
+  color: #f39c12; /* Star color */
+  margin-right: 5px; /* Space between stars */
+}
+
 .rating {
     font-size: 16px;
     font-weight: 500;
@@ -48,4 +83,119 @@ font-weight: 500;
 .reviews {
     font-size: 14px;
     color: #666;
+}
+
+.price{
+display: flex;
+gap: 10px;
+align-items: center;
+
+}
+.price h2 {
+    font-size: xx-large;
+    font-weight: 600;
+    color: red;
+}
+.price h5 {
+      font-size: 15px;
+    color: #666;
+    font-weight: 500;
+}
+.seemore {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 20%;
+
+
+}
+.bt{
+
+
+    width: 90%;
+    color: #fff;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;  
+    transition:  0.5s ease;
+
+}
+.bt:hover {
+    background-color: var(--orange-color);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .tour-item {
+    width: 70% !important; /* Full width on smaller screens */
+    margin: 20px 0; /* Adjust margin for better spacing */
+  }
+  .tour-list {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+}
+@media (max-width: 480px) {
+  .tour-item {
+    width: 90% !important; 
+    margin: 10px 0;
+    padding: 0 10px ; 
+    
+  }
+    .tour-list {
+        padding: 0px; /* Remove padding for very small screens */
+    }
+    .title {
+        font-size: 12px; /* Smaller title font size */
+    }
+    .price h2 {
+        font-size: 17px; /* Smaller price font size */
+    }
+    .price h5 {
+            font-size: 12px; /* Smaller price description font size */
+        }
+        .rating {
+            font-size: 14px; /* Smaller rating font size */
+        }
+        .stars  {
+            font-size: 15px; /* Smaller star icon size */   
+        }
+        .reviews {
+            font-size: 12px; /* Smaller reviews font size */
+            justify-content: center;
+            align-items: center;
+        }
+        .bt {
+            width: 80%; 
+            font-size: 16px;
+        } 
+        .duration-rating {
+            font-size: 14px; 
+            gap: 10px;
+        }
+        
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    /* ✅ Center items */
+   
+    margin-top: 5%;
+    padding: 0px 10px;
+  }
+    .tour-item {
+        width: 40% !important; 
+        margin: 20px 30px; /* Adjust margin for better spacing */         
+    }
+
+
 }
