@@ -14,26 +14,24 @@ function App() {
     const[currentPage, setCurrentPage] = useState(1);
    const toursPerPage = 6;
 
-   const pages = Math.ceil(toursList.length / toursPerPage);
-    const debut = currentPage * toursPerPage;
-    const fin = (currentPage - 1) * toursPerPage;
+    const totalPages = Math.ceil(toursList.length / toursPerPage);
+  const start = (currentPage - 1) * toursPerPage;
+  const end = currentPage * toursPerPage;
   
-  const newtours = toursList.slice(debut, fin);
-
-
-
-
+    const Newtours = toursList.slice(start, end); 
 
 
    
-   <div>
+  return(
+      <div>
       <Header/>
        <Hero/>
        <Services/>
-       <Tour ToursList = {newtours}/>
-       <Pagination/>
-   </div>
+       <Tour ToursList = {Newtours}/>
+       <Pagination pages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      </div>
   )
+   
 }
 
 export default App;
