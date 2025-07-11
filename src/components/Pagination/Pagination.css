@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-margin-bottom: 10%;
+margin-bottom: 3%;
+margin-top: 2%;
 }
 .Pagination .page{
     width: 50px;

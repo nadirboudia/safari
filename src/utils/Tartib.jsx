@@ -5,10 +5,10 @@ export function paginate(length,list, currentPage){
     const startIndex = (currentPage - 1) * TOUR_PER_PAGE;
     const finishIndex = currentPage * TOUR_PER_PAGE;
 
-    const orderedTourList = list.slice(startIndex, finishIndex);
+    const OrderedTourList = list.slice(startIndex, finishIndex);
 
     return {
         pages,
-        orderedTourList
+       OrderedTourList
     }
 }

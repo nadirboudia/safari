@@ -1,0 +1,42 @@
+.banner {
+    width: 100%;
+    height: 300px ;
+    margin: 20px 0;
+    padding: 40px;
+}
+.banner-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.banner-layout{
+position: absolute;
+background-color: rgba(0,0,0,0.5);
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 7px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.banner .banner-wrapper .banner-layout h1{
+    font-size: 40px;
+    color: white;
+}
+
+@media(max-width: 500px){
+   .banner .banner-wrapper .banner-layout h1{
+    font-size: 18px;
+    color: white;
+}
+
+}
