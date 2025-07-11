@@ -10,6 +10,7 @@ import Pagination from "./components/Pagination/Pagination";
 import { useState } from "react";
 import { paginate } from "./utils/Tartib";
 import Banner from "./components/Banner/Banner";
+import Footer from './components/Footer/Footer'
 import Letter from './components/Letter/Letter'
 function App() {
 
@@ -38,6 +39,7 @@ const { pages, OrderedTourList } = paginate(toursList.length, sortedTourList, cu
        <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
        <Banner />
        <Letter />
+       <Footer/>
       </div>
   )
    
