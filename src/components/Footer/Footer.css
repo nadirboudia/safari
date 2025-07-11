@@ -3,6 +3,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 30px;
+    flex-wrap: wrap;
     background-color: #1a2b49;
 }
 .footer-item{
@@ -45,4 +46,62 @@
  .footer-icons .icon i{
     color: #1a2b49;
     font-size: 32px ;
+ }
+
+ .select-boxs{
+   padding: 10px  ;
+
+ }
+ .selected{
+   margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 10px;
+  
+ }
+ .box{
+   margin-bottom: 10%;
+    width: 300px; 
+   height: 70px;
+   display: flex;
+   flex-direction: column;
+  
+  
+
+ }
+ 
+ .select-box-label{
+   font-size: 17px;
+   font-weight: 600;
+   color: white;
+   margin-bottom: 2%;
+ }
+
+ .select-box-input{
+   
+   padding: 10px;
+   font-family: sans-serif;
+   font-size: medium;
+   font-weight: 500;
+   border-radius: 7px;
+   outline: none;
+  
+ }
+ .op{
+   font-size: large;
+   font-family: sans-serif;
+   font-weight: 500;
+ }
+
+ .footer-copy-right{
+   color: white;
+   
+   font-weight: 400;
+   margin-top: 25px;
+ }
+ @media(max-width:720px){
+   .Footer{
+      flex-direction: column;
+   }
  }
