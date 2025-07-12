@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom"
 
 function Navbar({toggle , setToggle}) {
   return (
@@ -8,13 +8,13 @@ function Navbar({toggle , setToggle}) {
 }} className="navbar">
         <ul  className="navbar-links">
             
-            <li onClick={()=>{setToggle(false)}} className="navbar-item"> <i class="bi bi-house-fill"></i>     Home</li>
+            <Link to='/' onClick={()=>{setToggle(false)}} className="navbar-item"> <i class="bi bi-house-fill"></i>     Home</Link>
           
-            <li onClick={()=>{setToggle(false)}}  className="navbar-item">    <i class="bi bi-bank2"></i> About</li>
+            <Link  to='/about' onClick={()=>{setToggle(false)}}  className="navbar-item">    <i class="bi bi-bank2"></i> About</Link>
           
-            <li onClick={()=>{setToggle(false)}} className="navbar-item">    <i class="bi bi-person-plus-fill"></i> Register</li>
+            <Link to='/register' onClick={()=>{setToggle(false)}} className="navbar-item">    <i class="bi bi-person-plus-fill"></i> Register</Link>
              
-            <li onClick={()=>{setToggle(false)}} className="navbar-item"> <i class="bi bi-arrow-right-square-fill"></i> Login</li>
+            <Link  to= '/login' onClick={()=>{setToggle(false)}} className="navbar-item"> <i class="bi bi-arrow-right-square-fill"></i> Login</Link>
           </ul>
           
     </nav>

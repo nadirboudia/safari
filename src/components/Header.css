@@ -13,12 +13,14 @@
     align-items: center;
     margin-left :15% ;
     background-color: var(--primary-color);
+     text-decoration: none;
    
    
 }
 .logo img{
     width: 75px;
     height: auto;
+   
     
 }
 .logo .logo-text {
@@ -47,7 +49,7 @@ nav
     margin: 0 17px;
     font-size: 21px;
     font-weight: 500;
-    color: var(--primary-text-color);
+  
     
 }
 .navbar-links :hover {
@@ -58,9 +60,11 @@ nav
    margin-right: 5px;
 
 }
-.navbar-links li {
+.navbar-item{
     list-style: none;
     display: inline-block;
+     text-decoration: none;
+       color: var(--primary-text-color);
 
    
 }

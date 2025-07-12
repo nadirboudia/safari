@@ -1,46 +1,33 @@
-
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import "./App.css";
 import Header from "./components/Header";
-import Services from "./components/services/Services";
-import Hero from "./components/heroheader/Hero";
-import Tour from "./components/tours/Tour";
-import {toursList} from "./data";
-import Sort from "./components/Sort/Sort";
-import Pagination from "./components/Pagination/Pagination";
-import { useState } from "react";
-import { paginate } from "./utils/Tartib";
-import Banner from "./components/Banner/Banner";
 import Footer from './components/Footer/Footer'
-import Letter from './components/Letter/Letter'
+import Home from './Pages/Home/Home'
+import About from './Pages/About/About'
+import Tourz from "./Pages/Tour/Tourz"
+import Register from './Pages/Forms/Register'
+import Login from './Pages/Forms/Login'
+
+
 function App() {
 
-    const[currentPage, setCurrentPage] = useState(1);
-    const[sort, setSort] = useState("recomended");
-   
-
-    // sort //
-const sortedTourList = 
-  sort === 'low'
-    ? [...toursList].sort((a, b) => a.priceFrom - b.priceFrom)
-    : sort === 'high'
-    ? [...toursList].sort((a, b) => b.priceFrom - a.priceFrom)
-    : [...toursList].sort((a, b) => b.rating - a.rating);
-
-const { pages, OrderedTourList } = paginate(toursList.length, sortedTourList, currentPage);
-
-   
+  
   return(
-      <div>
-      <Header/>
-       <Hero/>
-       <Services/>
-       <Sort sort={sort} setSort={setSort} toursLength={toursList.length}/>
-       <Tour  ToursList = {OrderedTourList}/>
-       <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-       <Banner />
-       <Letter />
-       <Footer/>
-      </div>
+      <BrowserRouter>
+        <Header/> 
+<Routes>
+
+   <Route path='/' element={<Home />} />
+         <Route path='/tourz/:id' element={<Tourz />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About />} />
+
+
+</Routes>
+   <Footer/>
+      </BrowserRouter>
+      
   )
    
 }

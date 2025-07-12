@@ -1,4 +1,5 @@
 import Ratinglist from "./Ratinglist"
+import {Link} from "react-router-dom"
 
 function TourItem({tour }) {
   return (
@@ -39,7 +40,9 @@ function TourItem({tour }) {
 
 
                         <div className="seemore">
-                            <button className="bt">See More</button>
+                            <Link to={`/tourz/${tour.id}`} className="bt">
+                            See More
+                            </Link>
                         </div>
 
             </div>

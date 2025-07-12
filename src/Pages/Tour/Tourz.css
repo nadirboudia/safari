@@ -1,0 +1,135 @@
+.tour{
+    padding: 30px;
+    
+}
+.tour-step{
+    font-size: 17px;
+    font-weight: 500;
+    color: gray;
+    margin-left: 45px;
+}
+.tour-step i{
+    font-size: 12px;
+
+}
+
+ .tour-category{
+    
+    background-color: rgb(2, 2, 50);
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 15px 40px ;
+    border-radius: 7px;
+    font-size: 21px;
+    width: max-content;
+ }
+ .rating-reeviews{
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
+ }
+ .tour-title{
+    color: rgb(2, 2, 50);
+    font-size: 32px;
+    margin-bottom: 15px; 
+     margin-left: 37px;   
+ }
+ .tour-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+ .tour-provider{
+   margin-left: 24px;
+   font-size: 17px;
+   font-weight: 500; 
+ }
+ .tour-provider span{
+    color: blue;
+ }
+
+ .tour-img-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+
+ }
+ .tour-img{
+    margin-right:15px;
+    width: 49%;
+    margin-left: 20px;
+ }
+
+ /* Book now */
+ .book-now{
+    box-shadow: 0 0 1px 1px gray;
+    margin-left: 50px;
+  
+ }
+.book-now-header{
+     background-color: #ffe8ed;
+     color: #ff5533;
+     font-size: 21px;
+     padding: 10px;
+     font-weight:500 ;
+     text-align: right;
+} 
+.book-now-body{
+    padding: 15px;
+}
+.book-now-booked{
+    background-color: #D1f6e2;
+    color: #090c0b;
+      width: max-content;
+      padding: 10px;
+      border-radius: 7px;
+
+}
+.book-now-price-wrapper{
+    display: flex;
+    margin: 21px 0;
+}
+.book-now-price b{
+    color: red;
+    font-size: 21px
+
+}
+.book-now-price p{
+    font-weight: 500;
+    font-size: 17px;
+    font-weight: 400;
+    color: gray;
+}
+.book-now-btn{
+    background-color: blue;
+    color: white;
+    font: bold;
+    font-size: 21px;
+    padding: 10px 40px;
+    border-radius: 60px;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer; 
+}
+.book-now-btn:hover{
+background: var(--orange-color);
+transition: ease-in-out 0.3s;
+scale: 1.1;
+}
+
+.book-now-more-info{
+    font-size: 17px;
+    margin: 20px 10px;
+   color: gray;
+   font-weight: 400;
+    margin-left: 10px;
+
+}
+.book-now-more-info i{
+font-size: 28px;
+ color: green;
+margin: 7px;
+}
