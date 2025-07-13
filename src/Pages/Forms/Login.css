@@ -1,0 +1,64 @@
+.form-wrapper{
+    height: calc(100vh - 100px);
+    width: 100%;
+    background: url(../../images/skyscrepper.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Login.css or App.css */
+.Toastify__toast {
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 12px 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast--error {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.Toastify__toast--success {
+  background-color: #4BB543;
+  color: white;
+}
+
+.Toastify__toast-body {
+  margin: 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+}
+
+.form input{
+    border: none;
+    padding: 10px;
+    font-size: 21px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.form input:focus{
+    outline: none;
+}
+.form button{
+    font-size: 24px;
+    border-radius: 60px;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-weight: 600;
+    background-color: blue;
+    cursor: pointer;
+  
+}
+.form button:hover{
+background-color: var(--orange-color);
+transition: ease-in-out 0.3s ; 
+
+}
