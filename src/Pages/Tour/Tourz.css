@@ -63,6 +63,69 @@
     margin-left: 20px;
  }
 
+.tour-descreption{
+    margin: 30px 0;
+    width: 70%;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    margin-left: 40px;
+}
+ .info-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+ }
+ .starss{
+    font-size: 24px;
+    color: #f39c12;
+    margin-left: 10px;
+    
+  }
+
+
+.tour-info-item{
+margin-bottom: 30px;
+margin-left: 40px;
+}
+.tour-info-item-title i{
+    margin-right: 7px;
+    font-size: 25px;
+
+}
+.tour-info-item-title{
+    font-size: 24px;
+font-weight: 600;
+}
+.tour-info-item-desc{
+    padding-left: 40px;
+    font-size: 21px;
+    color: gray;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* Book now */
  .book-now{
     box-shadow: 0 0 1px 1px gray;
@@ -132,4 +195,79 @@ scale: 1.1;
 font-size: 28px;
  color: green;
 margin: 7px;
+}
+
+
+@media(max-width:1100px){
+    .tour-img-wrapper{
+        flex-direction: column;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+       align-items: center;
+       flex-direction: column; 
+    }
+    .tour-img{
+       width: 60%;
+       justify-content: center;
+       margin-bottom: 20px;
+     
+    }
+    .book-now{
+        width: 60%;
+        margin-left: 10px;
+ }
+   .tour-descreption{
+  width: 100%;
+  margin: 25px 15px;
+  }
+  .rating-reeviews{
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+@media(max-width:600px){
+    .tour-img-wrapper{
+        flex-direction: column;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+       align-items: center;
+       flex-direction: column; 
+    }
+    .tour-img{
+       width: 100%;
+       justify-content: center;
+       margin-bottom: 20px;
+       margin: 10px;
+     
+    }
+    .book-now{
+        width: 100%;
+        margin: 10px;
+ }
+   .tour-descreption{
+  width: 100%;
+  margin: 25px 15px;
+  font-size: 17px;
+  }
+  .rating-reeviews{
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    
+  }
+  .starss{
+    font-size: 20px;
+    color: #f39c12;
+    
+  }
+  .tour-provider{
+    font-size: 13px;
+    width: 40%;
+  }
+  .tour-title{
+    font-size: 21px;
+    width: 100%;
+  }
 }

@@ -2,7 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { toursList } from "../../data";
 import Ratinglist from "../../components/tours/Ratinglist";
-import './Tourz.css'
+import "./Tourz.css";
+import Booknow from "./Booknow";
 function Tourz() {
   const { id } = useParams();
   console.log(id);
@@ -18,7 +19,7 @@ function Tourz() {
       <h1 className="tour-title">Dubai : {tour.title}</h1>
       <div className="tour-info">
         <div className="rating-reeviews">
-          <span className="stars">
+          <span className="starss">
             <Ratinglist rating={tour.rating} />
           </span>
           <span className="rating">{tour.rating}</span>
@@ -30,30 +31,65 @@ function Tourz() {
         </div>
       </div>
 
-
-
       <div className="tour-img-wrapper">
         <img src={tour.image} alt={tour.title} className="tour-img" />
-        <div className="book-now">
-          <div className="book-now-header"> Save up to 35% </div>
-        <div className="book-now-body">
-          <div className="book-now-booked">
-            Booked 42 times yesterday
+        <Booknow tour={tour} priceFrom={tour.priceFrom} className='book' />
+      </div>
+      <p className="tour-descreption">
+        Discover a different side of Dubai on a fun-filled safari across the
+         desert. Try sandboarding, dune bashing and a camel ride, with the option
+        to add an electrifying quad bike ride or immersive Al Khayma Camp dinner
+        experience to your adventure.
+      </p>
+      <div className="tour-more-information">
+        <h2 className="info-title">About this Activity</h2>
+        <div className="tour-info-item">
+          <div className="tour-info-item-title">
+            <i style={{color:'#27ae60'}}  className="bi bi-calendar3"> </i>
+            Free Cancellation
           </div>
-          <div className="book-now-price-wrapper">
-            <div className="book-now-price">
-              <b> ${tour.priceFrom}</b>  <p>per person</p>
-            </div>
+          <p className="tour-info-item-desc">
+            Cancel up to 24 hours in advance to receive a full refund
+          </p>
+        </div>
+        <div className="tour-info-item">
+          <div className="tour-info-item-title">
+            <i  style={{color:'#2980b9'}} className="bi bi-calendar-plus-fill" > </i>
+            Reserve Now & Pay later
           </div>
-          <button className="book-now-btn ">Book Now</button>
+          <p className="tour-info-item-desc">
+            Keep your travel plan flexible –– book your spot and pay nothing
+            today.
+          </p>
         </div>
-    <p className="book-now-more-info">
-      <i className="bi bi-calendar-check"></i>
-      <span>Reserve now and pay later</span>
-      To book your spot and pay nothing today
-    </p>
+
+        <div className="tour-info-item">
+          <div className="tour-info-item-title">
+            <i  style={{color:'#e74c3c'}} className="bi bi-virus" > </i>
+            COVID-19 precautions
+          </div>
+          <p className="tour-info-item-desc">
+            Special health and safety measures are in place. Check your activity
+            voucher once you book for full details.
+          </p>
         </div>
-         
+
+        <div className="tour-info-item">  
+          <div className="tour-info-item-title">
+            <i  style={{color:'#8e44ad'}} className="bi bi-clock-history"> </i>
+            Duration: 4 – 7 hours
+          </div>
+          <p className="tour-info-item-desc">
+            Check availability to see starting times.
+          </p>
+        </div>
+        <div className="tour-info-item">
+          <div className="tour-info-item-title">
+            <i  style={{color:'#34495e'}} className="bi bi-person-check"> </i>
+            Live tour guide
+          </div>
+          <p className="tour-info-item-desc">English</p>
+        </div>
       </div>
     </section>
   );
